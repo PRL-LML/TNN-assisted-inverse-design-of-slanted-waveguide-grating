@@ -11,15 +11,12 @@ grating_info = {
     '00': {'filename': 'Red.xlsx', 'sheet_name': 'Peak', 'performance_name': 'Red_Peak', 'usecols': 'A:F'},    
     '01': {'filename': 'Red.xlsx', 'sheet_name': 'Ave', 'performance_name': 'Red_Ave', 'usecols': 'A:F'},
     '02': {'filename': 'Red.xlsx', 'sheet_name': 'Uniformity', 'performance_name': 'Red_Uniformity', 'usecols': 'A:F'},
-    '03': {'filename': 'Red.xlsx', 'sheet_name': 'P_A_U', 'performance_name': 'Red_P_A_U', 'usecols': 'A:H'},
     '10': {'filename': 'Green.xlsx', 'sheet_name': 'Peak', 'performance_name': 'Green_Peak', 'usecols': 'A:F'},    
     '11': {'filename': 'Green.xlsx', 'sheet_name': 'Ave', 'performance_name': 'Green_Ave', 'usecols': 'A:F'},
     '12': {'filename': 'Green.xlsx', 'sheet_name': 'Uniformity', 'performance_name': 'Green_Uniformity', 'usecols': 'A:F'},
-    '13': {'filename': 'Green.xlsx', 'sheet_name': 'P_A_U', 'performance_name': 'Green_P_A_U', 'usecols': 'A:H'},
     '20': {'filename': 'Blue.xlsx', 'sheet_name': 'Peak', 'performance_name': 'Blue_Peak', 'usecols': 'A:F'},
     '21': {'filename': 'Blue.xlsx', 'sheet_name': 'Ave', 'performance_name': 'Blue_Ave', 'usecols': 'A:F'},
-    '22': {'filename': 'Blue.xlsx', 'sheet_name': 'Uniformity', 'performance_name': 'Blue_Uniformity', 'usecols': 'A:F'},
-    '23': {'filename': 'Blue.xlsx', 'sheet_name': 'P_A_U', 'performance_name': 'Blue_P_A_U', 'usecols': 'A:H'},        
+    '22': {'filename': 'Blue.xlsx', 'sheet_name': 'Uniformity', 'performance_name': 'Blue_Uniformity', 'usecols': 'A:F'},  
 }
 
 
@@ -29,7 +26,6 @@ grating_info = {
 # 20 = b_peak, 21 = b_ave, 22 = b_uniformity
 
 grating = '00'
-########
 
 ## Load the dataset
 filename = grating_info[grating]['filename']
