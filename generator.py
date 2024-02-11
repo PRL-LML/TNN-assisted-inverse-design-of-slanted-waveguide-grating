@@ -38,7 +38,6 @@ def absolute_error(target, prediction):
 def uniformity(min_T, max_T):
     uniform = 1 - (max_T - min_T ) / (max_T + min_T)
     return uniform
-
 k = 1
 rate = 0.0001
 
@@ -68,7 +67,6 @@ while True:
     ave_T = np.mean(prediction_T)
     min_T = np.min(prediction_T)
     
-#     dB = imbalance(min_T, max_T)
     uniform = uniformity(min_T, max_T)
     
     max_APE = absolute_error(k, max_T)
@@ -102,50 +100,10 @@ print('Predicted max_T:', max_T)
 # print('Predicted uniform:', uniform)
 # print('Predicted ave_T:', ave_T)
 # print('Uniformity:', uniform)
-# print('Gap:', dB)
 
-
-
-# while True:
-#     y_target = [k]  
-#     y_transform = d.scaler_y.transform([y_target])
-# 
-#     n_samps = 10000
-#     
-#     y_fix = np.zeros((n_samps, len(y_target))) + y_transform
-#     y_fix = torch.tensor(y_fix, dtype = torch.float)
-#     y_fix = torch.cat([torch.randn(n_samps, c.ndim_z), c.add_z_noise * torch.zeros(n_samps, 0), y_fix], dim=1)
-#     y_fix = y_fix.to(device)
-# 
-#     # posterior samples
-#     rev_x0 = generator(y_fix, rev=True)[0]
-#     
-#     ## Save the predicted X ###
-#     rev_x = rev_x0.cpu().data.numpy()
-#     rev_x = torch.tensor(d.inverse_transform_x(rev_x))
-#     rev_x = torch.mean(rev_x, dim=0)
-#     rev_x = np.array(rev_x.detach().cpu())
-#     
-#     fname = 'gen_samps_inn_x.csv' 
-#     np.savetxt(fname, rev_x, fmt='%.5f', delimiter=',')
-# 
-#     prediction_T = m.pre_transmittance([rev_x])
-#     max_T = np.max(prediction_T)
-#     print(max_T)
-#     
-#     APE = absolute_percentage_error(k, max_T)
-#     if APE > 0.1:
-#         k = k - 0.0001 
-#     else:
-#         break
-
-# print('X:', rev_x)
-# print('Optimized T:', k)
-# print('Predicted T:', prediction_T)
-
-# end_time = time.time()
-# elapsed_time = end_time - start_time
-# print("Elapsed time: {:.1f} s".format(elapsed_time))
+end_time = time.time()
+elapsed_time = end_time - start_time
+print("Elapsed time: {:.1f} s".format(elapsed_time))
 
 
 
