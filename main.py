@@ -10,7 +10,6 @@ import losses
 import model
 import data as d
 from sklearn.model_selection import train_test_split
-import numpy as np
 
 x_train = d.x_train
 y_train = d.y_train
