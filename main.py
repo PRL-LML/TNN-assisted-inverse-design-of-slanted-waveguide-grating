@@ -156,7 +156,7 @@ def train_epoch():
                 test_mse_y_loss += mse_y_loss
                 test_mmd_x_loss += mmd_x_loss
 
-            # Calculate the avg loss of training
+            # Calculate the avg loss of test
             test_avg_loss = test_loss.cpu().data.numpy() / (j + 1)
             test_avg_mse_y_loss = test_mse_y_loss.cpu().data.numpy() / (j + 1)
             test_avg_mmd_x_loss = test_mmd_x_loss.cpu().data.numpy() / (j + 1)
